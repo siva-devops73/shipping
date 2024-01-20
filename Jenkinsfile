@@ -1,6 +1,6 @@
 @Library('roboshop') _
 
-env.cibuild = "java3"
+env.cibuild = "java"
 mainci()
 
 

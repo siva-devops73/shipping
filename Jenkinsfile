@@ -1,56 +1,56 @@
-@Library('roboshop') _
+//@Library('roboshop') _
 
-env.cibuild = "java"
-env.component "shipping"
-mainci()
-
-
+//env.cibuild = "java"
+//env.component "shipping"
+//mainci()
 
 
 
 
 
 
-//pipeline {
 
-//  agent {
-//     node { label 'workstation'}
-//   }
 
-//  stages {
+pipeline {
 
-//      stage('Build') {
-//         steps {
-//           sh 'mvn package'
-//         }
-//     }
+  agent {
+     node { label 'workstation'}
+   }
 
-//      stage('Unit Tests') {
-//         steps {
-//           echo 'Unit Tests'
+  stages {
+
+      stage('Build') {
+         steps {
+           sh 'mvn package'
+         }
+     }
+
+      stage('Unit Tests') {
+         steps {
+           echo 'Unit Tests'
            // sh 'mvn test'
-//         }
-//      }
+         }
+      }
 
-//      stage('Code Analysis') {
-//         steps {
-//           echo 'Code Analysis'
+      stage('Code Analysis') {
+         steps {
+           echo 'Code Analysis'
            // sh 'sonar-scanner -Dsonar.host.url=http://172.31.30.244:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.projectKey=shipping -Dsonar.java.binaries=target'
-//         }
-//      }
+         }
+      }
 
-//      stage('Security Scans') {
-//         steps {
-//            echo 'Security Scans'
-//         }
-//      }
+      stage('Security Scans') {
+         steps {
+            echo 'Security Scans'
+         }
+      }
 
-//      stage('Publish A Article') {
-//         steps {
-//           echo 'Publish A Article'
-//         }
-//      }
+      stage('Publish A Article') {
+         steps {
+           echo 'Publish A Article'
+         }
+      }
 
 
-//  }
-//}
+  }
+}

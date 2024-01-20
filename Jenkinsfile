@@ -1,8 +1,8 @@
-//@Library('roboshop') _
+@Library('roboshop') _
 
-//env.cibuild = "java"
-//env.component "shipping"
-//mainci()
+env.cibuild = "java"
+env.component = "shipping"
+mainci()
 
 
 

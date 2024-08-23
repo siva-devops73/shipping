@@ -8,5 +8,8 @@ serviceAccount:
   create: true
   annotations:
     eks.amazonaws.com/role-arn: arn:aws:iam::904827379241:role/eks-prod-ssm-pm-role
-PARAMETERS: "CART_ENDPOINT,roboshop.prod.shipping.cart_endpoint DB_HOST,roboshop.prod.shipping.db_host"
+PARAMETERS: "CART_ENDPOINT,roboshop.prod.shipping.cart_endpoint DB_HOST,roboshop.prod.shipping.db_host MYSQL_ENDPOINT,roboshop.prod.shipping.mysql_endpoint MYSQL_USERNAME,roboshop.prod.shipping.username MYSQL_PASSWORD,roboshop.prod.shipping.password COMPONENT,shipping SCHEMA_TYPE,mysql"
+
+schemaInitContainer:
+  enabled: true
 
